@@ -1,0 +1,90 @@
+/* -------------------------------------------------------
+   CSS VARIABLES – PREMIUM PORTFOLIO DESIGN SYSTEM
+------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+
+  --secondary: #8b5cf6;
+  --secondary-light: #a78bfa;
+
+  --text-light: #e5e7eb;
+  --text-dark: #cbd5e1;
+
+  --bg-dark: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+
+  --border-light: rgba(255, 255, 255, 0.1);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(90deg, #6366f1, #8b5cf6);
+  --gradient-soft: linear-gradient(90deg, #4f46e5, #a78bfa);
+  --gradient-radial: radial-gradient(circle at top, #1e1b4b, #0a0a0a);
+
+  /* Shadows */
+  --shadow-soft: 0px 0px 20px rgba(99, 102, 241, 0.25);
+  --shadow-strong: 0px 0px 35px rgba(139, 92, 246, 0.35);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Spacing */
+  --section-padding: 5rem;
+  --container-width: 1280px;
+}
+
+/* -------------------------------------------------------
+   DARK MODE VARIABLES
+------------------------------------------------------- */
+
+[data-theme="dark"] {
+  --bg-dark: #070707;
+  --bg-card: rgba(255, 255, 255, 0.06);
+
+  --text-light: #f3f4f6;
+  --border-light: rgba(255, 255, 255, 0.15);
+
+  --shadow-soft: 0px 0px 20px rgba(139, 92, 246, 0.3);
+  --shadow-strong: 0px 0px 40px rgba(99, 102, 241, 0.4);
+}
+
+/* -------------------------------------------------------
+   UTILITY CLASSES LINKED TO VARIABLES
+------------------------------------------------------- */
+
+/* Apply primary gradient */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+/* Soft card background */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+}
+
+/* Soft shadow */
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+/* Section spacing */
+.section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* Container width */
+.container-custom {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}

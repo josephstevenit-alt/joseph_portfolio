@@ -1,0 +1,123 @@
+/* -------------------------------------
+   Tailwind Base Styles
+-------------------------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------
+   Global Reset & Typography
+-------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#0a0a0a] text-gray-200 font-sans antialiased;
+}
+
+/* -------------------------------------
+   Custom Scrollbar
+-------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+/* -------------------------------------
+   Gradient Text
+-------------------------------------- */
+.text-gradient {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------------
+   Premium Glass Effect
+-------------------------------------- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* -------------------------------------
+   Smooth Section Padding
+-------------------------------------- */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* -------------------------------------
+   Link Hover Glow
+-------------------------------------- */
+.link-hover:hover {
+  color: #a78bfa;
+  text-shadow: 0px 0px 8px rgba(167, 139, 250, 0.8);
+}
+
+/* -------------------------------------
+   Premium Hover Glow Cards
+-------------------------------------- */
+.hover-glow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* -------------------------------------
+   Fade Animations
+-------------------------------------- */
+.fade-in {
+  animation: fadeIn 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------------
+   Button Glow Animation
+-------------------------------------- */
+.btn-glow:hover {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5),
+              0 0 25px rgba(139, 92, 246, 0.4);
+}
+
+/* -------------------------------------
+   Responsive Fixes
+-------------------------------------- */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* -------------------------------------
+   Smooth Background
+-------------------------------------- */
+.bg-gradient-hero {
+  background: radial-gradient(circle at top, #1e1b4b, #0a0a0a);
+}

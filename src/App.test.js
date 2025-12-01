@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+// Basic smoke test — ensures App renders without crashing
+test("renders portfolio app without errors", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  
+  // Verify important sections render
+  const heroElement = screen.getByRole("heading", { level: 1, hidden: true });
+  expect(heroElement).toBeInTheDocument();
 });

@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+/* -------------------------------------------------------
+   APP WRAPPER STYLES
+------------------------------------------------------- */
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Smooth fade on route/component change */
+.page-transition {
+  animation: fadeInPage 0.6s ease forwards;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* -------------------------------------------------------
+   GLOBAL CONTAINER ALIGNMENT
+------------------------------------------------------- */
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.4rem;
+}
+
+/* -------------------------------------------------------
+   COMMON SECTION WRAPPERS
+------------------------------------------------------- */
+
+.section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+}
+
+/* subtle divider between sections */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 3rem 0;
+}
+
+/* -------------------------------------------------------
+   PREMIUM CARD SHADOW + GLASS
+------------------------------------------------------- */
+
+.card-custom {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-strong);
+}
+
+/* -------------------------------------------------------
+   BUTTON STYLES
+------------------------------------------------------- */
+
+.btn {
+  padding: 0.75rem 1.6rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-outline {
+  border: 1px solid var(--border-light);
+  background: transparent;
+  color: var(--text-light);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* -------------------------------------------------------
+   IMAGES
+------------------------------------------------------- */
+
+.img-rounded {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s ease;
+}
+
+.img-rounded:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-strong);
+}
+
+/* -------------------------------------------------------
+   MOBILE IMPROVEMENTS
+------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
+
+  .btn {
+    padding: 0.65rem 1.3rem;
+  }
+}
+
+/* -------------------------------------------------------
+   UTILITY CLASSES FOR PORTFOLIO
+------------------------------------------------------- */
+
+.text-glow {
+  text-shadow: 0px 0px 15px rgba(139, 92, 246, 0.4);
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+  background-image: var(--gradient-primary);
+  background-clip: border-box;
+}
+
+.blur-bg {
+  backdrop-filter: blur(25px);
+}
+
+/* disable dragging images */
+img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
