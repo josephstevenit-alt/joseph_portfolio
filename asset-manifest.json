@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/joseph_portfolio/static/css/main.46c26c1a.css",
+    "main.js": "/joseph_portfolio/static/js/main.9b10dc80.js",
+    "static/media/ecommerce.png": "/joseph_portfolio/static/media/ecommerce.4ea79329fa6157f671dc.png",
+    "static/media/elearning.png": "/joseph_portfolio/static/media/elearning.56aadf2203556d89f5fb.png",
+    "static/media/joseph.jpg": "/joseph_portfolio/static/media/joseph.2e273ecb025c8ac8108b.jpg",
+    "index.html": "/joseph_portfolio/index.html",
+    "main.46c26c1a.css.map": "/joseph_portfolio/static/css/main.46c26c1a.css.map",
+    "main.9b10dc80.js.map": "/joseph_portfolio/static/js/main.9b10dc80.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46c26c1a.css",
+    "static/js/main.9b10dc80.js"
+  ]
+}
